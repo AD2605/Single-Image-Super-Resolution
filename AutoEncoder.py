@@ -42,7 +42,7 @@ class AutoEncoder(nn.Module):
         out = self.convT4(out)
         out = nn.functional.relu(out)
         out = self.convT5(out)
-        out = self.transform(out, (1440, 2048), align_corners=False, mode='bilinear')
+        out = self.transform(out, (1080, 1920), align_corners=False, mode='bilinear')
         return out
 
     def train_model(self, dataloader_HR, model, epochs, dataloader_LR, val_HR, val_LR):

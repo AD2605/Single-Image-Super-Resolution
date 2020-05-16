@@ -10,7 +10,7 @@ data_HR = DataLoader(
     torchvision.datasets.ImageFolder(
         '/home/atharva/Datasets/DIV2K_train_HR/',
         transform=transforms.Compose([
-            transforms.Resize((1440, 2048)),
+            transforms.Resize((1080, 1920)),
             transforms.ToTensor()
         ])
     ),
@@ -35,6 +35,7 @@ val_HR = DataLoader(
     torchvision.datasets.ImageFolder(
         '/home/atharva/Datasets/DIV2K_VAL_HR',
         transform=transforms.Compose([
+            transforms.Resize((1080, 1920)),
             transforms.ToTensor()
         ])
     ),
